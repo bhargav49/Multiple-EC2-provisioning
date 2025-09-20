@@ -53,7 +53,7 @@ resource "aws_instance" "my_instance"{
 count = 3
 key_name =  aws_key_pair.deployer.key_name
 security_groups = [aws_security_group.my_security.name]
-instance_type = var.ec2_instace_type   #adding variable reference
+instance_type = var.ec2_instance_type   #adding variable reference
 ami = var.ec2_ami_id  #adding variable reference
 user_data = file("nginx_install.sh")
   #storage
